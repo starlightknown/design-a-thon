@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+body {
+  box-sizing: border-box;
+background-image: url("bg.jpg");
+  font-family: 'Long Cang', cursive;
+  font-weight: bold;
+}
+
+/* ---------- Container for all items ---------- */
+
+.container {
+  margin: 2%;
+}
+
+/* ---------- Button Nav ----------  */
+
+.buttons,
+#edit-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/* ---------- General Button CSS ---------- */
+
+.btn {
+  background-color: rgb(238, 131, 149); /* Set the background color to pink */
+    border: none; /* Remove the border */
+    color: white; /* Set the text color to white */
+    padding: 16px 32px; /* Add some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove the default underline */
+    display: inline-block; /* Display the button as an inline block */
+    font-size: 16px; 
+    font-weight: bold;/* Set the font size */
+    margin: 4px 2px; /* Add some margin */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Add a box shadow */
+  }
+
+.highlight {
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  -webkit-tap-highlight-color: transparent;
+  will-change: opacity, transform;
+}
+
+.highlight:active {
+  background: #d9baf2;
+}
+
+.red {
+  background-color: #9422ff;
+}
+
+/* Material Icons within Button Nav */
+
+.buttons .material-icons {
+  padding-right: 0.7rem;
+}
+
+#heart {
+  margin-right: 0.5rem;
+}
+
+#heart,
+#empty {
+  margin-bottom: 0.7rem;
+}
+
+/* ----------  Stickys  ------------- */
+
+
+/* Stickys */
+
+.card-panel {
+  position: relative;
+font-weight: bold;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+
+  color: white;
+  border-radius: 6px rgb(255, 255, 255);
+  background-color: #55067c;
+  box-shadow: 2px 2px 12px -2px rgba(0, 0, 0, 0.5);
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  resize: none;
+
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Erase Button in Stickys */
+
+.erase {
+  right: -0.8rem;
+  bottom: 0.5rem;
+
+  float: right;
+  margin-top: 0.5rem;
+
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+}
+
+/* ---------- Media Queries ---------- */
+
+
+/* Width of iPhone 6: 375 px*/
+
+@media screen and (max-width: 375px) {
+  #heart,
+  #empty {
+      width: 100%;
+  }
+
+  #heart {
+      margin-right: 0;
+  }
+}/* Width of iPhone 6 Plus: 375 px*/
+
+
+
+@media screen and (min-width: 376px) and (max-width: 415px) {
+  #heart,
+  #empty {
+      min-width: 48%;
+  }
+}/* Anything larger than iPhone 6 Plus */
+
+
+
+@media screen and (min-width: 415px) {
+  .card-panel {
+      margin-right: 1rem;
+  }
+}/*Anything bigger than an Apple iPad/iPad Mini */
+
+
+
+@media screen and (min-width: 768px) {
+  .card-panel {
+      max-width: 18rem;
+  }
+}

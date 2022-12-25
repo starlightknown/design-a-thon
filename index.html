@@ -3,21 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>Oh Crop</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'><link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./calendar.css">
 </head>
 <body>
+    <div class="calendar">
+        <div class="pages"></div>
+      </div>
 
-<head>
-  <script src="https://use.fontawesome.com/484df5253e.js"></script>
-</head>
-<body>
-	<div id="app"></div>
-</body>
-
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-<script src='https://npmcdn.com/react@15.3.0/dist/react.min.js'></script>
-<script src='https://npmcdn.com/react-dom@15.3.0/dist/react-dom.min.js'></script><script  src="./script.js"></script>
-
+      
+      <div class="box">
+        <div class="laptop-screen">
+          <div class="support-one"></div>
+          <div class="support-two"></div>
+          <div class="support-three"></div>
+          <div class="support-four"></div>
+          <div class="camera"></div>
+          <div class="inner-screen">
+            <iframe src="https://www.youtube.com/embed/R-PdHLHXjIg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+          </div>
+          <div class="brand"></div>
+        </div>
+        <div class="connector"></div>
+        <div class="keyboard-body">
+          <div class="keyboard">
+            <div class="key-one"></div>
+            <div class="key-two"></div>
+            <div class="key-three"></div>
+            <div class="key-four"></div>
+            <div class="key-five"></div>
+            <div class="key-six"></div>
+            <div class="key-seven"></div>
+            <div class="key-eight"></div>
+            <div class="key-nine"></div>
+            <div class="key-ten"></div>
+          </div>
+          <div class="mousepad">
+            <div class="partition"></div>
+          </div>
+        </div>
+        <div class="laptop-body"></div>
+      </div>
+    <figure class="star" id="star">
+	</figure>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML for the sidebar -->
+<nav id="sidebar">
+    <ul>
+      <li><a href="#" onclick="toggleWindow('sticky/sticky.html');">Note It</a></li>
+      <li><a href="#" onclick="toggleWindow('session/index.html');">Study Session</a></li>
+      <li><a href="#" onclick="toggleWindow('relax/index.html');">Relax</a></li>
+      <li><a href="404/index.html">Get Inspired</a></li>
+    </ul>
+  </nav>
+  
+  <!-- JavaScript function to open and close the windows -->
+  <script>
+    // Object to store the windows
+    var windows = {};
+  
+    function toggleWindow(url) {
+      // Check if the window is already open
+      if (windows[url]) {
+        // Close the window if it is already open
+        windows[url].close();
+        // Remove the reference to the window
+        delete windows[url];
+      } else {
+        // Open the window if it is not already open
+        windows[url] = window.open(url, '_blank', 'height=500,width=500');
+      }
+    }
+  </script>
+  
+    <script src="script.js"></script>
+    <script src="calendar.js"></script>
 </body>
 </html>
