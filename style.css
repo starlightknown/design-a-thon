@@ -5,7 +5,9 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    cursor: url('leebit.png'), url('leebit.svg'), auto;
   }
+    
   /* Style the sidebar */
   #sidebar {
     background-color: #7b5de8; /* Set the background color to purple */
